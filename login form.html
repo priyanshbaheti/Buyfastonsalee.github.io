@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form in javascript with validation</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container" style="background-color: #ccc;">
+	<h1 class="text-sucess text center">validation form in java </h1>
+	<div class="col-lg-8 m-auto d-block">
+		<form action="#" onsubmit="return validation()">
+			  <div class="form-group">
+			  	<label>Username:</label>
+			  	<input type="text" name="user" class="form-control" id="user">
+			  	<span id="username" class="text-danger"></span>
+			  </div>
+			   <div class="form-group">
+			  	<label>Password:</label>
+			  	<input type="text" name="pass" class="form-control" id="pass">
+			  		<span id="pass" style="font-weight: bold;" class="text-danger"></span>
+			  </div><div class="form-group">
+			  	<label>confirm password:</label>
+			  	<input type="text" name="conpass" class="form-control" id="conpass">
+			  		<span id="conpass" style="font-weight: bold;" class="text-danger"></span>
+			  </div>
+
+			  <div class="form-group">
+			  	<label>mobile number:</label>
+			  	<input type="text" name="mobilenumber" class="form-control" id="mobilenumber">
+			  		<span id="mobilenumber" style="font-weight: bold;" class="text-danger"></span>
+			  </div>
+			  <div class="form-group">
+			  	<label>email:</label>
+			  	<input type="text" name="email" class="form-control" id="email">
+
+			  		<span id="email" style="font-weight: bold;" class="text-danger"></span>
+			  </div>
+			  <div>
+			  	<input type="submit" name="" value="submit" style="background-color: green; color:white;">
+			  </div>
+		</form>
+	</div>
+</div>
+<script type="text/javascript">
+	function validation() {
+		var user = document.getElementById('user').value;
+		
+
+		
+		
+		var email = document.getElementById('email').value;
+		
+		if (user == "") {
+			document.getElementById('username').innerHTML ="please fill the username";
+			
+		}
+		var pass = document.getElementById('pass').value;
+		if (pass== "") {
+			document.getElementById('pass').innerHTML ="please fill the password";
+			
+		}
+		var conpass = document.getElementById('conpass').value;
+		if (conpass == "") {
+			document.getElementById('conpass').innerHTML ="please fill the confirm password";
+			
+		}
+		var mobilenumber = document.getElementById('mobilenumber').value;
+		if (mobilenumber == "") {
+			document.getElementById('mobilenumber').innerHTML ="please fill the mobilenumber";
+			
+		}
+
+		var email = document.getElementById('email').value;
+		if (email == "") {
+			document.getElementById('email').innerHTML ="please fill the email";
+			
+		}
+}	
+</script>
+</body>
+</html>

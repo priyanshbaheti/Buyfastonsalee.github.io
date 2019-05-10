@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	function validation() {
+	
+		var username =document.getElementById('username').value;
+		var password =document.getElementById('password').value;
+		var confirmpassword=document.getElementById('confirmpassword').value;
+		var mobilenumber= document.getElementById('mobilenumber').value;
+		var email=document.getElementById('email').value;
+if (username=="") {
+	document.getElementById('usererror').innerHTML===="**please fill the user name in alphabets";
+	return false;
+}
+
+}
+if (password=="") {
+			document.getElementById('passerror').innerHTML="**please fill the password";
+			return false;
+		}
+		if (confirmpassword=="") {
+			document.getElementById('conpasserror').innerHTML="please confirm password";
+			return false;
+		}
+		if (mobilenumber=="") {
+			document.getElementById('mbnoerror').innerHTML="please fill the mobile number";
+			return false;
+		}
+		if (email=="") {
+			document.getElementById('emailer').innerHTML="please fill your email id";
+			return false;
+		}
+		
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="col-lg-8 m-auto d-block">
+		<form   actiom="#"   onsubmit="return validation()">
+			<div class="form-group">
+				<label>Username:</label>
+				<input type="text" class="form-control" id="username">
+				<span id="usererror"style="font-weight: bold;color: red"></span>
+				
+			</div>
+			<div class="form-group">
+				<label>Password:</label>
+				<input type="text" class="form-control" id="password">
+				<span id="passerror" style="font-weight: bold;color: red"></span>
+			</div>
+			<div class="form-group">
+				<label>Confirm Password:</label>
+				<input type="text" class="form-control" id="confirmpassword">
+				<span id="conpasserror"  style="font-weight: bold;color: red"></span>
+			</div>
+			<div class="form-group">
+				<label>Mobile number:</label>
+				<input type="text" class="form-control" id="mobilenumber">
+				<span id="mbnoerror"   style="font-weight: bold;color: red"></span>
+			</div>
+			<div class="form-group">
+				<label>email:</label>
+				<input type="email" class="form-control" id="email">
+				<span id="emailer" style="font-weight: bold;color: red"></span>
+			</div>
+			
+				<input type="submit" name="submit" value="submit" class="btn btn-primary">
+			
+		</form>
+	</div>
+</div>
+</body>
+</html>
